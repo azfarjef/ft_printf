@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 01:47:54 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/06/27 09:45:39 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/06/27 22:42:54 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_settings(t_set *set)
 	set->format++;
 	ft_flag(set);
 	ft_width(set);
-	
+	ft_precision(set);
 	num = ft_select_format(set);
 	func_arr[num](set);
 }

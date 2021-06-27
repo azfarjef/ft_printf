@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_width.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/27 09:46:12 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/06/27 10:58:00 by mahmad-j         ###   ########.fr       */
+/*   Created: 2021/06/27 10:47:21 by mahmad-j          #+#    #+#             */
+/*   Updated: 2021/06/27 10:55:02 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-void	ft_width(t_set *set)
+int	ft_atoi(const char *str)
 {
-	set->width = 0;
-	if (*set->format == '*')
+	int		sign;
+	long	val;
+	long	i;
+
+	i = 0;
+	val = 0;
+	sign = 1;
+	while (str[i] && (str[i] == 32 || (str[i] >= 9 && str[i] <= 13)))
+		i++;
+	if (str[i] && str[i] == '-')
 	{
-		set->width = va_arg(set->arg, int);
-		if (set->width < 0)
-		{
-			set->width = -1 * set->width;
-			set->flag[e_minus] =  '1';
-		}
-		set->format++;
+		sign = -1;
+		i++;
 	}
-	if (*set->format >= '0' && *set->format <= '9')
-		set->width = ft_atoi(set->format);
-	while (*set->format >= '0' && *set->format <= '9')
-		set->format++;
+	else if (str[i] == '+')
+		i++;
+	while (str[i] && ft_isdigit(str[i]))
+		val = (val * 10) + (str[i++] - '0');
+	return (val * sign);
 }

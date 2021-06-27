@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 23:04:18 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/06/24 01:45:45 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/06/27 23:06:09 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_printf(const char *format, ...)
 		if (*set->format && *set->format == '%')
 			ft_settings(set);
 	}
-	
-	
+	va_end(set->arg);
+	len = set->total_len;
+	free(set);
+	return (len);
 }
