@@ -6,11 +6,13 @@
 #    By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/28 07:47:39 by mahmad-j          #+#    #+#              #
-#    Updated: 2021/06/28 07:56:04 by mahmad-j         ###   ########.fr        #
+#    Updated: 2021/07/11 19:03:02 by mahmad-j         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isdigit.c ft_putchar.c
+SRC			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isdigit.c ft_putchar.c \
+				ft_putstr.c ft_strcmp.c ft_strcpy.c ft_strlen.c ft_strncpy.c \
+				ft_strnew.c
 OBJ			=	$(SRC:%.c=%.o)
 INCLUDES	=	./
 NAME		=	libft.a
