@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 23:23:52 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 10:12:34 by mahmad-j         ###   ########.fr       */
+/*   Created: 2021/07/11 09:25:52 by mahmad-j          #+#    #+#             */
+/*   Updated: 2021/07/11 09:28:38 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
+char	*ft_strnew(size_t size)
+{
+	char	*ret;
 
-void	*ft_calloc(size_t n, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	ft_putchar(char c);
-int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
-size_t	ft_strlen(char *str);
-char	*ft_strnew(size_t size);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-
-
-
-
-#endif
+	ret = (char *)malloc(sizeof(char) * size + 1);
+	ft_bzero(ret, sizeof(char) * size + 1);
+	return (ret);
+}

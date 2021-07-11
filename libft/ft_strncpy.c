@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 23:23:52 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 10:12:34 by mahmad-j         ###   ########.fr       */
+/*   Created: 2021/07/11 10:00:13 by mahmad-j          #+#    #+#             */
+/*   Updated: 2021/07/11 10:12:17 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-void	*ft_calloc(size_t n, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	ft_putchar(char c);
-int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
-size_t	ft_strlen(char *str);
-char	*ft_strnew(size_t size);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-
-
-
-
-#endif
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+	
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = 0;
+		i++;
+	}
+	return (dest);
+}
