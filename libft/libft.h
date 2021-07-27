@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 23:23:52 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 19:25:07 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/07/27 07:02:03 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strcpy(char *dest, const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 void	ft_putstr(char *str);
+void	ft_putnchar(char c, int n);
 
 
 
