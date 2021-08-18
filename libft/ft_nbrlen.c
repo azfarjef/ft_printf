@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/27 08:22:04 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/31 07:35:27 by mahmad-j         ###   ########.fr       */
+/*   Created: 2021/07/31 11:45:38 by mahmad-j          #+#    #+#             */
+/*   Updated: 2021/08/18 19:11:56 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-int	ft_select_format(t_set *set)
+int	ft_nbrlen(long long nbr)
 {
-	int	num;
+	int	nbrlen;
 
-	num = 0;
-	if(*set->format == 'c')
-		num = e_char;
-	else if (*set->format == 's')
-		num = e_string;
-	else if (*set->format == 'p')
-		num = e_pointer;
-	else if (*set->format == 'd')
-		num = e_deci;
-	return (num);
+	nbrlen = 0;
+	if (nbr == 0)
+		return (1);
+	if (nbr < 0)
+		nbr = -1 * nbr;
+	while (nbr > 0)
+	{
+		nbr = nbr / 10;
+		nbrlen++;
+	}
+	return (nbrlen);
 }
