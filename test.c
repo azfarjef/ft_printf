@@ -12,6 +12,8 @@ int	main(void)
 	// ft_printf("|%20p|\n", b);
 	// printf("|%20p|\n", b);
 
-	ft_printf("|%-5.4d|", 123);
-	printf("|%-5.4d|", 123);
+	// ft_printf("|%-5.4d|", 123);
+	// printf("|%-5.4d|", 123);
+	ft_printf("|%5.0u|", -123);
+	printf("|%5.0u|", -123);
 }
