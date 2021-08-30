@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 08:22:04 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/19 07:42:58 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/30 18:44:01 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int	ft_select_format(t_set *set)
 		num = e_deci;
 	else if (*set->format == 'u')
 		num = e_udeci;
+	else if (*set->format == 'x' || *set->format == 'X')
+		num = e_hex;
 	return (num);
 }

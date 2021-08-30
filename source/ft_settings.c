@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 01:47:54 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/19 07:42:11 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/30 18:42:40 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_settings(t_set *set)
 	[e_string] = ft_out_string,
 	[e_pointer] = ft_out_pointer,
 	[e_deci] = ft_out_deci,
-	[e_udeci] = ft_out_udeci};
-	// [e_u_hex_int] = ft_out_hex,
+	[e_udeci] = ft_out_udeci,
+	[e_hex] = ft_out_hex};
 	// [e_percent] = ft_out_percent};
 
 	set->format++;
