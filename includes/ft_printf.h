@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 23:05:17 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 18:49:44 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/30 22:16:03 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ enum			e_func
 	e_deci,
 	e_udeci,
 	e_hex,
-	// e_percent,
+	e_percent,
 	e_len
 };
 
@@ -62,12 +62,6 @@ void	ft_out_pointer(t_set *set);
 void	ft_out_deci(t_set *set);
 void	ft_out_udeci(t_set *set);
 void	ft_out_hex(t_set *set);
-
-
-
-
-
-
-
+void	ft_out_percent(t_set *set);
 
 #endif
