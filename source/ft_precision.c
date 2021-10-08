@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 22:46:52 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/17 09:58:11 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:23:26 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_precision(t_set *set)
 		if (*set->format == '*')
 		{
 			set->precision = va_arg(set->arg, int);
-			if(set->precision < 0)
+			if (set->precision < 0)
 			{
 				set->precision = 0;
 				set->point = 0;

@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 08:56:16 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/17 14:09:29 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/10/05 20:30:57 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	ptr_hex(unsigned long long addr)
 
 static void	ptr_width(t_set *set, int addrlen, int prec)
 {
-	if (set->width > 0)
+	if (set->width > addrlen && set->width > set->precision)
 	{
 		set->total_len = set->total_len + set->width - addrlen;
 		set->width++;
@@ -43,7 +43,7 @@ static void	ptr_width(t_set *set, int addrlen, int prec)
 	}
 }
 
-static void	ptr_print(t_set *set, unsigned long long addr, int addrlen, int prec)
+static void	put_ptr(t_set *set, unsigned long long addr, int addrlen, int prec)
 {
 	if ((set->flag[e_zero] == '1' && prec == 0) || set->flag[e_minus] == '1')
 	{
@@ -56,7 +56,7 @@ static void	ptr_print(t_set *set, unsigned long long addr, int addrlen, int prec
 	if (set->flag[e_minus] != '1' && (set->flag[e_zero] != '1' || prec != 0))
 	{
 		ft_putstr("0x");
-		if(addr == 0)
+		if (addr == 0 && set->point != 1)
 			prec = 1;
 		ft_putnchar('0', prec);
 	}
@@ -74,15 +74,19 @@ void	ft_out_pointer(t_set *set)
 	addr = (unsigned long long)va_arg(set->arg, void *);
 	addrlen = 2;
 	tmp = addr;
+	if (addr == 0 && set->point != 1)
+		addrlen++;
 	while (tmp > 0)
 	{
 		tmp /= 16;
 		addrlen++;
 	}
 	prec = set->precision - addrlen + 2;
-	if	(prec < 0)
+	if (prec < 0)
 		prec = 0;
 	if (prec != 0 && set->width <= set->precision)
 		set->total_len = set->total_len + prec;
-	ptr_print(set, addr, addrlen, prec);
+	put_ptr(set, addr, addrlen, prec);
+	set->total_len = set->total_len + addrlen;
+	set->format++;
 }

@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 08:44:42 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 18:52:05 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/10/05 15:28:34 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	str_width(t_set *set, int strlen)
 	if (set->width > strlen)
 	{
 		set->total_len = set->total_len + (set->width - strlen);
-		while(set->width > strlen)
+		while (set->width > strlen)
 		{
 			ft_putchar(' ');
 			set->width--;
@@ -53,12 +53,10 @@ void	ft_out_string(t_set *set)
 	}
 	else
 	{
-		if (ft_strcmp(tmp, "(null)") == 0)
-			set->precision = 0;
 		str = ft_strnew(set->precision);
 		ft_strncpy(str, tmp, set->precision);
 	}
-	if (set->precision == 1)
+	if (set->point == 1)
 		strlen = 0;
 	else
 		strlen = ft_strlen(str);

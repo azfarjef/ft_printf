@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:44:33 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 20:49:02 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:16:06 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	put_hex(unsigned long long nbr, char format)
 			if (format == 'x')
 				ft_putchar(nbr - 10 + 'a');
 			else
-				ft_putchar(nbr  - 10 + 'A');
+				ft_putchar(nbr - 10 + 'A');
 		}
 	}
 }
 
-static void	hex_flag(t_set *set, unsigned long long nbr, int nbrlen, int prec)
+static void	hex_flag(t_set *set, unsigned long long nbr, int nl, int prec)
 {
 	set->width++;
 	if (set->flag[e_minus] == '1')
@@ -41,17 +41,17 @@ static void	hex_flag(t_set *set, unsigned long long nbr, int nbrlen, int prec)
 		ft_putnchar('0', prec);
 		if (set->point != 1 || nbr != 0)
 			put_hex(nbr, *set->format);
-		if (set->width > nbrlen)
-			while (--set->width > nbrlen + prec)
+		if (set->width > nl)
+			while (--set->width > nl + prec)
 				ft_putchar(' ');
 	}
 	else
 	{
-		if (set->width > nbrlen && (set->point != 0 || set->flag[e_zero] != '1'))
-			while (--set->width > nbrlen + prec)
+		if (set->width > nl && (set->point != 0 || set->flag[e_zero] != '1'))
+			while (--set->width > nl + prec)
 				ft_putchar(' ');
-		if (set->width > nbrlen && set->point == 0 && set->flag[e_zero] == '1')
-			while (--set->width > nbrlen + prec)
+		if (set->width > nl && set->point == 0 && set->flag[e_zero] == '1')
+			while (--set->width > nl + prec)
 				ft_putchar('0');
 		ft_putnchar('0', prec);
 		if (set->point != 1 || nbr != 0)

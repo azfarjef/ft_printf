@@ -20,6 +20,9 @@ int	main(void)
 	// ft_printf("|%08x|", 123);
 	// printf("|%08x|", 123);
 
-	ft_printf("|%-08%|");
-	printf("|%%|");
+	ft_printf("|%-d|", -2147483648, 123);
+	// printf("Return %d", printf("chelsea"));
+
+	// printf("%d\n", printf("|%p|", NULL));                                                                                                                     
+    // printf("%d\n", ft_printf("|%p|", NULL));
 }

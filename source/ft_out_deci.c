@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/31 07:18:43 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/18 19:11:59 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:14:01 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(long long nbr)
 {
-	if(nbr < 0)
+	if (nbr < 0)
 		ft_putnbr(nbr * -1);
 	else if (nbr >= 0 && nbr <= 9)
 		ft_putchar('0' + nbr);

@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 23:23:52 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 22:15:54 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:02:20 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,5 @@ char	*ft_strncpy(char *dest, const char *src, size_t n);
 void	ft_putstr(char *str);
 void	ft_putnchar(char c, int n);
 int		ft_nbrlen(long long nbr);
-
-
-
-
 
 #endif

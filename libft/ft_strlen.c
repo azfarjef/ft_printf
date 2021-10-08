@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 09:17:19 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 09:23:53 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:05:57 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 size_t	ft_strlen(char *str)
 {
 	size_t	i;
-	
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }

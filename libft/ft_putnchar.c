@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 09:21:54 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/17 09:25:46 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:03:33 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putnchar(char c, int n)
 {
-	while(n-- > 0)
+	while (n-- > 0)
 		write(1, &c, 1);
 }

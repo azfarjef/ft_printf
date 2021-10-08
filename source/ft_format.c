@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 08:22:04 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 22:13:47 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:23:02 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_select_format(t_set *set)
 	int	num;
 
 	num = 0;
-	if(*set->format == 'c')
+	if (*set->format == 'c')
 		num = e_char;
 	else if (*set->format == 's')
 		num = e_string;

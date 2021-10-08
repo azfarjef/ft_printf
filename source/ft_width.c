@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 09:46:12 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/06/27 10:58:00 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:16:44 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_width(t_set *set)
 		if (set->width < 0)
 		{
 			set->width = -1 * set->width;
-			set->flag[e_minus] =  '1';
+			set->flag[e_minus] = '1';
 		}
 		set->format++;
 	}

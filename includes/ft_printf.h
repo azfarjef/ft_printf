@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 23:05:17 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 22:16:03 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:01:27 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
-typedef struct	s_set
+typedef struct s_set
 {
 	const char	*format;
 	va_list		arg;

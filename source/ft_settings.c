@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 01:47:54 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/08/30 22:09:38 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:26:28 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_settings(t_set *set)
 {
 	int				num;
-	static	t_func	*func_arr[e_len] = {
+	static t_func	*func_arr[7] = {
 	[e_char] = ft_out_char,
 	[e_string] = ft_out_string,
 	[e_pointer] = ft_out_pointer,

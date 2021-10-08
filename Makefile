@@ -6,7 +6,7 @@
 #    By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 23:26:41 by mahmad-j          #+#    #+#              #
-#    Updated: 2021/06/28 07:46:38 by mahmad-j         ###   ########.fr        #
+#    Updated: 2021/10/06 08:51:27 by mahmad-j         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,14 @@ $(NAME)	:
 			ar rc $(NAME) $(OBJ) $(LIB_PATH)/*.o
 			ranlib $(NAME)
 
+bonus	:	re
+
 clean	:
 			rm -f $(OBJ)
 			make clean -C $(LIB_PATH)
 
 fclean	:	clean
+			make clean -C $(LIB_PATH)
 			rm -f $(NAME)
 
 re		:	fclean all

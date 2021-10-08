@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 18:46:32 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/07/11 18:49:00 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/08/31 07:06:15 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char *str)
 {
-	while(*str)
+	while (*str)
 	{
 		ft_putchar(*str);
 		str++;
